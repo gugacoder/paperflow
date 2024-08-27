@@ -17,7 +17,7 @@ O PaperFlow é um framework que utiliza algoritmos inteligentes para renderizar 
 Clone o repositório e siga as instruções abaixo:
 
 ```bash
-git clone https://github.com/seu-usuario/paperflow.git
+git clone https://github.com/keepingcode/paperflow.git
 cd paperflow
 ```
 
