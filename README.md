@@ -21,10 +21,6 @@ git clone https://github.com/keepingcode/paperflow.git
 cd paperflow
 ```
 
-## Uso
-
-Após a instalação, siga as instruções de uso no diretório `/docs`. O PaperFlow lida automaticamente com a renderização e organização de suas páginas. Basta publicar seus objetos e o framework fará o resto.
-
 ## Contribuindo
 
 Contribuições são bem-vindas! Por favor, envie pull requests para correções de bugs, melhorias de performance ou novas funcionalidades.
@@ -34,10 +30,6 @@ Contribuições são bem-vindas! Por favor, envie pull requests para correções
 3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`).
 4. Faça o push para a branch (`git push origin feature/nova-feature`).
 5. Envie um pull request.
-
-## Licença
-
-Este projeto é licenciado sob a licença MIT - veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
 ## Contato
 
