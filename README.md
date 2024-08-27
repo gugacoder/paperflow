@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/keepingcode/paperflow/main/favicon.ico" width="32" height="32"> PaperFlow
+# <img src="https://raw.githubusercontent.com/keepingcode/paperflow/main/favicon.ico" width="40" height="40"> PaperFlow
 
 Renderização automática de páginas com adaptação dinâmica para otimização da experiência do usuário.
 
