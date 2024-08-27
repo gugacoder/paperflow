@@ -6,6 +6,20 @@ Renderização automática de páginas com adaptação dinâmica para otimizaç�
 
 O PaperFlow é um framework que utiliza algoritmos inteligentes para renderizar automaticamente páginas, ajustando dinamicamente a apresentação dos objetos para proporcionar a melhor experiência ao usuário. Com o PaperFlow, o processo de definição de layouts é automatizado, permitindo que os desenvolvedores foquem em publicar objetos no sistema enquanto o framework otimiza a visualização desses dados.
 
+## Componentes Principais
+
+### Innkeeper
+O **Innkeeper** é a camada de hospedagem do sistema, desenvolvida em ASP.NET, responsável por gerenciar a infraestrutura e o ambiente onde o PaperFlow opera. Ele atua como o host principal, facilitando a comunicação entre as camadas do sistema e garantindo que o **PaperCatalog** e o **Interlayer** funcionem de forma integrada e eficiente.
+
+### Interlayer
+O **Interlayer** é o padrão de desenho do JSON utilizado no PaperFlow para transportar dados, metadados e informações de ação entre as camadas do sistema. Ele organiza de forma eficiente o fluxo de dados necessários para a renderização automática das páginas, invocação de ações e manipulação de datasets, garantindo consistência e flexibilidade.
+
+### PaperCatalog
+O **PaperCatalog** é o sistema backend responsável pela publicação e organização dos metadados de páginas, ações e datasets. Ele armazena e disponibiliza os objetos utilizados pelo **PaperBrowser** para renderizar as páginas e invocar ações, funcionando como o núcleo de dados do sistema.
+
+### PaperBrowser
+O **PaperBrowser** é o sistema frontend em JavaScript projetado para navegar pelo catálogo do Paper e renderizar páginas automaticamente. Ele utiliza algoritmos inteligentes para otimizar a experiência do usuário, ajustando dinamicamente a apresentação dos dados e ações do **PaperCatalog**.
+
 ## Recursos
 
 - Renderização automática de páginas
