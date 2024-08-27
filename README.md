@@ -1,4 +1,4 @@
-# PaperFlow
+# ![PaperFlow Icon](https://raw.githubusercontent.com/keepingcode/paperflow/main/favicon.ico) PaperFlow
 
 Renderização automática de páginas com adaptação dinâmica para otimização da experiência do usuário.
 
