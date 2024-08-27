@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/keepingcode/paperflow/main/logomarca.png" width="40" height="40" alt="PaperFlow">
+# <img src="https://raw.githubusercontent.com/keepingcode/paperflow/main/logomarca.png" height="40" alt="PaperFlow">
 
 Renderização automática de páginas com adaptação dinâmica para otimização da experiência do usuário.
 
