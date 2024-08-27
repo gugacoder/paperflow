@@ -1,0 +1,3 @@
+# Interlayer
+
+O **Interlayer** é o padrão de desenho do JSON utilizado no PaperFlow para transportar dados, metadados e informações de ação entre as camadas do sistema. Ele facilita a comunicação entre o frontend e o backend, organizando de forma eficiente o fluxo de dados necessários para a renderização automática das páginas, a invocação de ações e a manipulação de datasets. Com o **Interlayer**, o sistema garante que todas as interações sejam realizadas de maneira estruturada e consistente, proporcionando flexibilidade e adaptabilidade durante o processo de renderização inteligente no **PaperBrowser**.

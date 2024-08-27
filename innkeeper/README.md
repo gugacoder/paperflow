@@ -1,0 +1,3 @@
+# Innkeeper
+
+O **Innkeeper** é a camada de hospedagem do sistema, desenvolvida em ASP.NET, responsável por gerenciar a infraestrutura e o ambiente onde o PaperFlow opera. Ele atua como o host principal, facilitando a comunicação entre as camadas do sistema e garantindo que o **PaperCatalog** e o **Interlayer** funcionem de forma integrada e eficiente. Além disso, o **Innkeeper** proporciona uma base segura e escalável para o processamento de dados e a execução das ações no backend, garantindo uma experiência de usuário otimizada e confiável no **PaperBrowser**.
