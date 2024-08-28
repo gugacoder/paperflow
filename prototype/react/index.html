@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innkeeper</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        #loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: #333;
+        }
+        #root {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">Carregando...</div>
+    <div id="root"></div>
+    <script src="/dist/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+
+        // Função para esconder o loading e mostrar o conteúdo principal
+        function showContent() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('root').style.display = 'block';
+        }
+
+        // Espera o evento de carregamento completo da página
+        window.addEventListener('load', function() {
+            // Simula um pequeno atraso para garantir que o React tenha tempo de renderizar
+            setTimeout(showContent, 500);
+        });
+    </script>
+</body>
+</html>

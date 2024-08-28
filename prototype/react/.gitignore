@@ -1,0 +1,51 @@
+# Node.js
+node_modules/
+build/
+
+# Logs
+logs
+**/**.log*
+*.tgz
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Miscellaneous
+**/Thumbs.db
+
+# TypeScript
+**/*.tsbuildinfo
+
+# Parcel-bundler cache (https://parceljs.org/)
+**/.cache
+**/.parcel-cache
+
+# SvelteKit build
+/.svelte-kit
+
+# Storybook
+**/out/
+**/.storybook/
+
+# Static site generators
+**/.next
+**/out
+**/public
+
+# Jest
+coverage/
+jest.config.js
+jest.setup.js
+jest.setup.ts
+jest.setupTestFramework.js
+
+# macOS
+**/.DS_Store
+
+# Windows
+**/Thumbs.db
+**/ehthumbs.db
+
+# Linux
+**/*.swp

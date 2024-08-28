@@ -1,0 +1,13 @@
+{
+  "editor.tabSize": 2,
+  "editor.useTabStops": false,
+  "editor.detectIndentation": false,
+  "editor.rulers": [100],
+  "files.associations": {
+    "*.json": "jsonc",
+    "*.wixproj": "xml"
+  },
+  "[powershell]": {
+    "files.encoding": "iso88591"
+  }
+}

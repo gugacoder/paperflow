@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome against localhost",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/dummy.js", // arquivo fictício para que o VS Code aceite a configuração
+      "preLaunchTask": "npm: start",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
