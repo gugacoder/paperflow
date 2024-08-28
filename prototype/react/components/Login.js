@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Button, Typography, Box, Container, Alert, InputAdornment, CircularProgress, Grid } from '@mui/material';
 import { gql, useMutation } from '@apollo/client';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -20,6 +20,15 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    // Add favicon
+    const link = document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = '/assets/favicon.ico';
+    document.head.appendChild(link);
+  }, []);
 
   const [login, { loading }] = useMutation(LOGIN_MUTATION, {
     onError: (error) => {
@@ -57,8 +66,8 @@ const Login = () => {
     }}>
       <Box
         sx={{
-          width: '900px',
-          height: '500px',
+          width: '950px',
+          height: '550px',
           display: 'flex',
           backgroundColor: 'white',
           borderRadius: 2,
@@ -67,11 +76,12 @@ const Login = () => {
       >
         <Grid container>
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: 4 }}>
+            <Box component="img" src="/assets/logomarca.svg" alt="PaperFlow Logo" sx={{ width: '250px', mb: 3 }} />
             <Typography component="h1" variant="h4" sx={{ mb: 2 }}>
               LOGIN
             </Typography>
             <Typography variant="subtitle1" sx={{ mb: 3 }}>
-              Olá! Bemvindo ao PaperFlow.
+              👋 Olá! Bem-vindo!
             </Typography>
             <Box component="form" onSubmit={handleLogin} sx={{ width: '100%', maxWidth: '400px' }}>
               <TextField
