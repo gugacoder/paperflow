@@ -1,0 +1,61 @@
+# Definição do Schema Principal
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+# Importa as Queries definidas em queries.graphql
+type Query {
+  getEntity(ref: EntityRef!): Entity
+  getAllEntities: [Entity!]!
+  getEntityActions(ref: EntityRef!): [Action!]!
+}
+
+# Importa as Mutations definidas em mutations.graphql
+type Mutation {
+  request(ref: EntityRef!, payload: PayloadInput!): Status
+  requestBatch(batch: [PayloadInput!]!): [Status!]!
+}
+
+# Tipos Comuns
+input EntityRef {
+  name: String!
+  args: JSON
+}
+
+input PayloadInput {
+  form: JSON
+  data: JSON
+}
+
+type Status {
+  ok: Boolean!
+  code: Int!
+  outcome: String
+  message: String
+  details: [String!]
+}
+
+type Entity {
+  name: String!
+  description: String
+  fields: [Field!]!
+}
+
+type Field {
+  name: String!
+  type: String!
+  isRequired: Boolean!
+}
+
+type Action {
+  name: String!
+  description: String
+  parameters: [Parameter!]!
+}
+
+type Parameter {
+  name: String!
+  type: String!
+  isRequired: Boolean!
+}

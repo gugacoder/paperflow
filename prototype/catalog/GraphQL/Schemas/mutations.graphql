@@ -1,0 +1,29 @@
+# Definição da mutation principal para execução de ações
+type Mutation {
+  # Executa uma ação com base em uma entidade referenciada e um payload
+  request(ref: EntityRef!, payload: PayloadInput!): Status
+  
+  # Executa múltiplos payloads em batch
+  requestBatch(batch: [PayloadInput!]!): [Status!]!
+}
+
+# Definição do input que será passado como referência de entidade
+input EntityRef {
+  name: String!          # Nome da entidade
+  args: JSON             # Argumentos dinâmicos para a entidade
+}
+
+# Definição do input de payload que será enviado ao servidor
+input PayloadInput {
+  form: JSON             # Parâmetros enviados como form (chave=valor)
+  data: JSON             # Dados afetados pela ação
+}
+
+# Definição do tipo Status que é retornado após uma requisição
+type Status {
+  ok: Boolean!           # Indica se a operação foi bem-sucedida
+  code: Int!             # Código de status HTTP
+  outcome: String        # Descrição do resultado da operação
+  message: String        # Mensagem adicional do servidor
+  details: [String!]     # Detalhes adicionais sobre o resultado
+}

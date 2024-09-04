@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "ms-dotnettools.vscode-dotnet-runtime",
+    "ms-dotnettools.csharp",
+    "ms-dotnettools.csdevkit",
+    "saoudrizwan.claude-dev",
+    "entuent.fira-code-nerd-font",
+    "github.copilot",
+    "yzhang.markdown-all-in-one",
+    "mathiassoeholm.markdown-link-updater",
+    "kortina.vscode-markdown-notes",
+    "pkief.material-icon-theme"
+  ]
+}

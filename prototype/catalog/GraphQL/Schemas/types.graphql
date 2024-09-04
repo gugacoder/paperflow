@@ -1,0 +1,34 @@
+# Definição dos Tipos Dinâmicos para o sistema
+scalar JSON
+
+# Tipos para representar referências de entidade e ações
+type EntityRef {
+  name: String!
+  args: JSON
+}
+
+# Tipos usados para descrever entidades e suas propriedades
+type Entity {
+  name: String!
+  description: String
+  fields: [Field!]!
+}
+
+type Field {
+  name: String!
+  type: String!
+  isRequired: Boolean!
+}
+
+# Tipos para descrever ações e seus parâmetros
+type Action {
+  name: String!
+  description: String
+  parameters: [Parameter!]!
+}
+
+type Parameter {
+  name: String!
+  type: String!
+  isRequired: Boolean!
+}

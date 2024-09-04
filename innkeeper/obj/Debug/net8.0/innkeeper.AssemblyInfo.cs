@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("innkeeper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81f302b21f9060ca485e5573371eb668caf7853d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d40be4d674773c249536596399492b7b832809bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("innkeeper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("innkeeper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

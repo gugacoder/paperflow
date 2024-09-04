@@ -1,0 +1,29 @@
+import React, { lazy, Suspense } from 'react';
+import { createRoot } from 'react-dom/client';
+import CssBaseline from '@mui/material/CssBaseline';
+import ThemeProvider from '@mui/material/ThemeProvider';
+import { createTheme } from '@mui/material/styles';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+const App = lazy(() => import('./App'));
+
+const theme = createTheme();
+
+const client = new ApolloClient({
+  uri: 'http://localhost:4000/graphql', // Update this URL if your GraphQL server is at a different location
+  cache: new InMemoryCache()
+});
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <ApolloProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Suspense fallback={<div>Loading...</div>}>
+          <App />
+        </Suspense>
+      </ThemeProvider>
+    </ApolloProvider>
+  </React.StrictMode>
+);

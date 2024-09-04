@@ -3,6 +3,7 @@ import { TextField, Button, Typography, Box, Container, Alert, InputAdornment, C
 import { gql, useMutation } from '@apollo/client';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import LockOutlined from '@mui/icons-material/LockOutlined';
+import { useNavigate } from 'react-router-dom';
 
 const LOGIN_MUTATION = gql`
   mutation Login($username: String!, $password: String!) {
@@ -20,6 +21,7 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Add favicon
@@ -37,8 +39,8 @@ const Login = () => {
     onCompleted: (data) => {
       if (data && data.login && data.login.token) {
         localStorage.setItem('token', data.login.token);
-        alert('Login successful!');
         setError('');
+        navigate('/workspace');
       } else {
         setError('Invalid response from server');
       }

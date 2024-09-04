@@ -1,0 +1,45 @@
+# Definição da Query principal para consultas no catálogo
+type Query {
+  # Consulta informações de uma entidade específica com base na referência
+  getEntity(ref: EntityRef!): Entity
+  
+  # Retorna todas as entidades registradas no catálogo
+  getAllEntities: [Entity!]!
+  
+  # Retorna detalhes sobre as ações disponíveis para uma entidade específica
+  getEntityActions(ref: EntityRef!): [Action!]!
+}
+
+# Definição do tipo Entity retornado pela consulta
+type Entity {
+  name: String!             # Nome da entidade
+  description: String       # Descrição da entidade
+  fields: [Field!]!         # Campos ou propriedades da entidade
+}
+
+# Definição do tipo Action que representa uma ação disponível para uma entidade
+type Action {
+  name: String!             # Nome da ação (e.g., "create", "update", "delete")
+  description: String       # Descrição da ação
+  parameters: [Parameter!]! # Parâmetros esperados pela ação
+}
+
+# Definição dos campos das entidades
+type Field {
+  name: String!             # Nome do campo
+  type: String!             # Tipo do campo (e.g., "String", "Int", "Boolean")
+  isRequired: Boolean!      # Indica se o campo é obrigatório
+}
+
+# Definição dos parâmetros para uma ação
+type Parameter {
+  name: String!             # Nome do parâmetro
+  type: String!             # Tipo do parâmetro
+  isRequired: Boolean!      # Indica se o parâmetro é obrigatório
+}
+
+# Definição do input que será passado como referência de entidade
+input EntityRef {
+  name: String!             # Nome da entidade
+  args: JSON                # Argumentos dinâmicos para a entidade
+}
